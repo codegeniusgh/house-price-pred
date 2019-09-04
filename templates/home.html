@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>House Price Prediction</title>
+</head>
+<body>
+    <h2>Predict house prices</h2>
+    {% for message in get_flashed_messages() %}
+        <h3>{{message}}</h3>
+    {% endfor %}
+    <form action="" method="post">
+        {{myform.hidden_tag() }}
+
+        {{myform.bedrooms.label()}}
+        {{myform.bedrooms()}}
+        <p></p>
+        {{myform.bathrooms.label()}}
+        {{myform.bathrooms()}}
+        <p></p>
+        {{myform.sqft_living.label()}}
+        {{myform.sqft_living()}}
+        <p></p>
+        {{myform.sqft_lot.label()}}
+        {{myform.sqft_lot()}}
+        <p></p>
+        {{myform.floors.label()}}
+        {{myform.floors()}}
+        <p></p>
+        {{myform.sqft_above.label()}}
+        {{myform.sqft_above()}}
+        <p></p>
+        {{myform.sqft_lot15.label}}
+        {{myform.sqft_lot15()}}
+        <p></p>
+        {{myform.yr_built.label()}}
+        {{myform.yr_built()}}
+        <p></p>
+        {{myform.condition.label()}}
+        {{myform.condition()}}
+        <p></p>
+        {{myform.zipcode.label()}}
+        {{myform.zipcode()}}
+        <p></p>
+        {{myform.submit()}}
+    </form>
+</body>
+</html>
